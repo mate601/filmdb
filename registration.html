@@ -1,0 +1,40 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> Registration </title>
+    <link rel="stylesheet" href="">
+  </head>
+  <body>
+    <h1>Signup</h1>
+    <form action="user_register.php" method="post">
+      <div>
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name">
+      </div>
+      <div>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email">
+      </div>
+      <div>
+        <label for="password">Password</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+        >
+        <label for="confirm_password">Confirm password</label>
+        <input
+          type="password"
+          id="confirm_password"
+          name="confirm_password"
+        >
+      </div>
+      <div>
+        <button type="submit">
+          Register
+        </button>
+      </div>
+    </form>
+  </body>
+</html>
