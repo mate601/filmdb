@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.4
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
 -- Gép: 127.0.0.1
--- Létrehozás ideje: 2023. Máj 14. 15:25
--- Kiszolgáló verziója: 10.4.17-MariaDB
--- PHP verzió: 8.0.0
+-- Létrehozás ideje: 2023. Máj 14. 21:39
+-- Kiszolgáló verziója: 10.4.28-MariaDB
+-- PHP verzió: 8.2.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -29,13 +29,13 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `films` (
   `id` int(11) NOT NULL,
-  `title` varchar(50) COLLATE utf8_hungarian_ci NOT NULL,
+  `title` varchar(50) NOT NULL,
   `length` int(11) NOT NULL,
-  `description` varchar(250) COLLATE utf8_hungarian_ci NOT NULL,
-  `link` varchar(250) COLLATE utf8_hungarian_ci NOT NULL,
-  `picture` varchar(250) COLLATE utf8_hungarian_ci NOT NULL,
-  `picturedesc` varchar(50) COLLATE utf8_hungarian_ci NOT NULL,
-  `mod` varchar(25) COLLATE utf8_hungarian_ci NOT NULL
+  `description` varchar(250) NOT NULL,
+  `link` varchar(250) NOT NULL,
+  `picture` varchar(250) NOT NULL,
+  `picturedesc` varchar(50) NOT NULL,
+  `mod` varchar(25) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_hungarian_ci;
 
 --
@@ -72,9 +72,9 @@ INSERT INTO `films` (`id`, `title`, `length`, `description`, `link`, `picture`, 
 
 CREATE TABLE `users` (
   `id` int(11) NOT NULL,
-  `name` varchar(100) COLLATE utf8_hungarian_ci NOT NULL,
-  `email` varchar(150) COLLATE utf8_hungarian_ci NOT NULL,
-  `password` varchar(32) COLLATE utf8_hungarian_ci NOT NULL
+  `name` varchar(100) NOT NULL,
+  `email` varchar(150) NOT NULL,
+  `password` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_hungarian_ci;
 
 --
@@ -82,10 +82,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `password`) VALUES
-(4, 'asd', 'asd@asd.asd', '$2y$10$xdYE1vLOwl0pRiFNLCqCzOnsk'),
-(6, 'Kata', 'kata@gmail.com', '$2y$10$uhnmODQIVdOdaF/QCBM66Ol/a'),
-(7, 'valaki', 'valaki@valami.com', '$2y$10$D6SLufJ0Y4a2S7T7FDEbdeOF0'),
-(8, 'asd123', 'asd123@gmail.com', '$2y$10$FGojNeWCN6XInWMbF127f.G0O');
+(14, 'Zaza', 'zaza@gmail.com', '$2y$10$aItUSewgIM9oJqlR3kOqWOSUocTgT4qfo1oZ4NmsnMWO8iPNx1CCi');
 
 --
 -- Indexek a kiírt táblákhoz
@@ -117,7 +114,7 @@ ALTER TABLE `films`
 -- AUTO_INCREMENT a táblához `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
