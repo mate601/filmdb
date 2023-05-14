@@ -1,5 +1,5 @@
 <?php
-
+  session_start();
 /*include("database.php");*/
 
 $is_invalid = FALSE;
@@ -20,7 +20,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
   if ($user) {
    
     if (password_verify($_POST['password'], $user['password'])) {
-      die ("Login successful.");
+      
+      $_SESSION['logged_in'] = $user['name'];
+      header ('location:login_success.php');
     }
   }
 
@@ -33,7 +35,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title> Registration </title>
+    <title> Login </title>
     <link rel="stylesheet" href="style_reg.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
   </head>
@@ -74,7 +76,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                       </div>
 
                       <div class="input-field">
-                          <input type="submit" class="submit" value="Login">
+                          <input type="submit" class="submit" value="Enter">
                           
                       </div>
                       <div class="signin">

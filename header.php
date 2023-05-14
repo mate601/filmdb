@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,7 +22,17 @@
             <li><a href="index.php#movies">Movies</a></li>
             <li><a href="index.php#coming">Coming</a></li>
          </ul>
-        <a href="registration.php" class="btn">Sign up</a>
+         <?php
+         if (isset($_SESSION['logged_in']))
+         {
+            $user_name = $_SESSION['logged_in']." ";
+
+            echo "<div>$user_name<a href='' class='btn'>Sign out</a></div>";
+
+         }
+         else echo '<a href="registration.php" class="btn">Sign up</a>';
+
+         ?>
 
     </header>
 </body>
