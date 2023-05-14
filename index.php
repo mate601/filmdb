@@ -31,7 +31,7 @@
             </div>
 
             <div class="swiper-slide container">
-                <img src="img/home2.jpg" alt="Avengers: Infinity War movie cover">
+                <img src="img/home2.png" alt="Avengers: Infinity War movie cover">
                 <div class="home-text">
                     <span>Marvel Universe</span>
                     <h1>Avengers: <br> Infinity War</h1>
@@ -48,6 +48,15 @@
                     <a href="https://www.imdb.com/video/vi2600385561/?playlistId=tt6320628&ref_=tt_pr_ov_vi" class="btn">Watch Trailer</a>
                 </div>
             </div>
+
+            <div class="swiper-slide container">
+                <img src="img/home4.jpg" alt="">
+                <div class="home-text">
+                    <span>Christopher Nolan</span>
+                    <h1>Interstellar</h1>
+                    <a href="https://www.imdb.com/video/vi1586278169/?playlistId=tt0816692&ref_=tt_pr_ov_vi" class="btn">Watch Trailer</a>
+                   
+                </div>
             
           </div>
           
@@ -115,13 +124,6 @@
         </div>
     </section>
 
-
-    <section class="coming" id="newsletter">
-        <h2 class="heading">Newsletter</h2>
-            <div class="coming-container swiper">
-                
-            </div>
-    </section>
     <section class="footer">
         <a href="index.php" class="logo">
             <i class='bx bxs-movie-play' ></i> Movies

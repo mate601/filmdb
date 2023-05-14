@@ -15,10 +15,9 @@
 
         <!--Menu-->
         <ul class="navbar">
-            <li><a href="index.php #home" class="home-active">Home</a></li>
-            <li><a href="index.php #movies">Movies</a></li>
-            <li><a href="index.php #coming">Coming</a></li>
-            <li><a href="index.php #newsletter">Newsletter</a></li>
+            <li><a href="index.php#home" class="home-active">Home</a></li>
+            <li><a href="index.php#movies">Movies</a></li>
+            <li><a href="index.php#coming">Coming</a></li>
          </ul>
         <a href="registration.php" class="btn">Sign up</a>
 

@@ -1,18 +1,37 @@
+
+
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title> Successful registration </title>
-    <link rel="stylesheet" href="style.css">
+    <title> Registration </title>
+    <link rel="stylesheet" href="style_reg.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
   </head>
   <body>
-  <?php include_once("header.php"); ?>
 
-  <div class="container">
-    <h1>Signup</h1>
-    <p>Signup was successful. Click here to <a href="user_login.php">login</a></p>
+    <form action="user_register.php" method="post">
+    <div class="wrapper">
+      <div class="container main">
+          <div class="row">
+              <div class="col-md-6 side-image">
+                  <div class="text">
+                      
+                  </div>
+              </div>
+              <div class="col-md-6 right">
+                   <div class="input-box">
+                      <header><h1>Signup</h1></header>
+                      <div class="signin">
+                          <span>Signup was successful. Click here to <a href="user_login.php">Login</a></span>
+                          <br><br>
+                          <span><a href="index.php">Back to Movies</a></span>
+                      </div>
+                   </div>
+              </div>
+          </div>
+      </div>
   </div>
-    
-
-  </body>
+</form>
+</body>
 </html>
