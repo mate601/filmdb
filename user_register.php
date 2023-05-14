@@ -2,6 +2,7 @@
 
 if ($_POST['password'] !== $_POST['confirm_password']) {
   die("Passwords must match");
+  
 }
 
 $hash = password_hash($_POST['password'], PASSWORD_DEFAULT);
@@ -17,8 +18,7 @@ if (isset($_POST['email']) && !empty($_POST['email'])) {
 }
 
 $query = "
-    INSERT INTO users 
-    (name, email, password)
+    INSERT INTO users (name, email, password)
     VALUES(?, ?, ?)";
 
 $stmt = $db->prepare($query);
@@ -32,7 +32,7 @@ if ($stmt->execute([
   $email,
   $hash
 ])) {
-  header("Location: registration_success.html");
+  header("Location: registration_success.php");
   exit;
 }
 else {
