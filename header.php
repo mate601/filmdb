@@ -26,8 +26,8 @@ session_start();
          if (isset($_SESSION['logged_in']))
          {
             $user_name = $_SESSION['logged_in']." ";
-
-            echo "<div>$user_name<a href='' class='btn'>Sign out</a></div>";
+        
+            echo "<div>$user_name<a href='destroy.php' class='btn'>Logout</a></div>";
 
          }
          else echo '<a href="registration.php" class="btn">Sign up</a>';
